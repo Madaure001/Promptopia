@@ -7,7 +7,7 @@ import React, { useEffect, useState } from 'react'
 const EditPrompt = () => {
 
     const router = useRouter();
-    const {searchParams} = useSearchParams();
+    const searchParams = useSearchParams();
     const promptId = searchParams.get('id');
     const [submitting, setSubmitting] = useState(false);
     const [post, setPost] = useState({

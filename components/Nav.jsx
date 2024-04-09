@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import logo from "../public/assets/images/logo.svg"
 import {signIn, signOut, getProviders, useSession} from 'next-auth/react';
 import { useEffect, useState } from "react";
 
@@ -26,7 +27,7 @@ const Nav = () => {
         {/* we create a clickable image  and page title */}
         <Link href="/" className="flex gap-2 flex-center">
             <Image 
-                src="../public/assets/images/logo.svg"                
+                src={logo}               
                 width={30}
                 height={30}
                 className="object-contain"
