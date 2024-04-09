@@ -2,7 +2,7 @@
 
 import Form from '@components/Form'
 import { useRouter, useSearchParams } from 'next/navigation';
-import React, { useEffect, useState } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 
 const EditPrompt = () => {
 
@@ -65,4 +65,9 @@ const EditPrompt = () => {
     )
 }
 
-export default EditPrompt;
+const UpdatedPrompt = () => {
+    <Suspense>
+        < EditPrompt />
+    </Suspense>
+}
+export default UpdatedPrompt;
